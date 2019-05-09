@@ -6,14 +6,14 @@
                     <ion-thumbnail class="movie-card-thumbnail" slot="start">
                         <img class="radius-border" [src]="getFilmPoster(movieDetails.Poster)">
                     </ion-thumbnail>
-                     <app-movie-card [movieDetails]="movieDetails"></app-movie-card>
+                    <app-movie-card [movieDetails]="movieDetails"></app-movie-card>
                   </ion-item>
             </ion-col>
             <ion-col class="ion-hide-md-up">
                 <ion-item class="movie-card" lines="none">
-                        <ion-thumbnail slot="start" class="movie-card-small-thumbnail">
-                            <img class="radius-border" [src]="getFilmPoster(movieDetails.Poster)">
-                        </ion-thumbnail>
+                    <ion-thumbnail slot="start" class="movie-card-small-thumbnail">
+                        <img class="radius-border" [src]="getFilmPoster(movieDetails.Poster)">
+                    </ion-thumbnail>
                     <app-movie-card-mobile [movieDetails]="movieDetails"></app-movie-card-mobile>
                 </ion-item>
             </ion-col>

@@ -21,7 +21,7 @@ Coverage report will be generated in coverage folder
 
 ### Applications 
 This application is using
-Ionic 4 : https://ionicframework.com/docs/components
-Ionic 4 css utils: https://ionicframework.com/docs/layout/css-utilities
-Angular 7: https://angular.io/docs
-Jest:  https://jestjs.io/
+- Ionic 4 : https://ionicframework.com/docs/components
+- Ionic 4 css utils: https://ionicframework.com/docs/layout/css-utilities
+- Angular 7: https://angular.io/docs
+- Jest:  https://jestjs.io/

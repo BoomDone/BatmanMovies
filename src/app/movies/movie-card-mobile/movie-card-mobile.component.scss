@@ -1,11 +1,11 @@
-.mobile-card-header{ 
+.mobile-card-header { 
     padding: 8px 8px 0px 8px;
 
     .mobile-card-subtitle {
         border-bottom: solid 1px black;
     }
 }
-.mobile-card-content{
+.mobile-card-content {
     padding: 0px 0px 0px 2px;
     font-size:12px;
 
@@ -13,13 +13,19 @@
         padding-left: 0;
     }
 
-    .mobile-rating{ 
+    .mobile-rating { 
         border: 1px solid  var(--ion-color-medium);
         padding: 4px;
         color: var(--ion-color-medium);
     }
-    .mobile-runtime{
+    .mobile-runtime {
         margin-left: 8px;
+    }
+
+    .mobile-plot {
+        overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
     }
 }
 

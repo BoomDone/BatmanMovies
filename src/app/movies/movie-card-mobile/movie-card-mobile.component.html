@@ -1,6 +1,6 @@
 <ion-card-header class="mobile-card-header"> 
-        <ion-card-subtitle class="mobile-card-subtitle">{{movieDetails.Title}}</ion-card-subtitle>
-    </ion-card-header>
+    <ion-card-subtitle class="mobile-card-subtitle">{{movieDetails.Title}}</ion-card-subtitle>
+</ion-card-header>
 <ion-card-content class="mobile-card-content">
     <ion-grid>
         <ion-row>
@@ -15,13 +15,13 @@
             </ion-col>
         </ion-row>
         <ion-row>
-            <ion-col>
+            <ion-col class="mobile-plot">
                 {{movieDetails.Plot}}
             </ion-col>
         </ion-row>
     </ion-grid>
 </ion-card-content>
-<ion-footer>
+<ion-footer no-border>
     <ion-toolbar class="footer">
         <ion-button float-right color="warning">View on IMDB</ion-button>
     </ion-toolbar>
