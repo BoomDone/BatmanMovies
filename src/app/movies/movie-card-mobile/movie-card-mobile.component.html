@@ -1,0 +1,28 @@
+<ion-card-header class="mobile-card-header"> 
+        <ion-card-subtitle class="mobile-card-subtitle">{{movieDetails.Title}}</ion-card-subtitle>
+    </ion-card-header>
+<ion-card-content class="mobile-card-content">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <span class="mobile-rating radius-border">{{movieDetails.Rated}}</span>
+                <span class="mobile-runtime">{{movieDetails.Runtime}}</span>
+            </ion-col> 
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                {{movieDetails.Released}}
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                {{movieDetails.Plot}}
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-card-content>
+<ion-footer>
+    <ion-toolbar class="footer">
+        <ion-button float-right color="warning">View on IMDB</ion-button>
+    </ion-toolbar>
+</ion-footer>

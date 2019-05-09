@@ -1,0 +1,29 @@
+.mobile-card-header{ 
+    padding: 8px 8px 0px 8px;
+
+    .mobile-card-subtitle {
+        border-bottom: solid 1px black;
+    }
+}
+.mobile-card-content{
+    padding: 0px 0px 0px 2px;
+    font-size:12px;
+
+    ion-col {
+        padding-left: 0;
+    }
+
+    .mobile-rating{ 
+        border: 1px solid  var(--ion-color-medium);
+        padding: 4px;
+        color: var(--ion-color-medium);
+    }
+    .mobile-runtime{
+        margin-left: 8px;
+    }
+}
+
+.footer {
+    --border-style: none;
+    --background: var(--card-background-color);
+}

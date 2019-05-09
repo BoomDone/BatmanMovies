@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar class="heading">
+    <img class="banner" src="assets/batmanImages/comic.jpg">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row class="ion-align-items-end">
+      <ion-col size="10" offset="2"> 
+            <ion-segment color="primary" class="ion-hide-sm-down decade-segment-container" 
+                         (ionChange)="filterDecade($event)" value="all">
+              <ion-segment-button class="decade-button" *ngFor="let decade of decades" [value]="decade">
+                <ion-label>{{decade}}'s</ion-label>
+              </ion-segment-button>
+              <ion-segment-button class="decade-button" value="all">
+                <ion-label>All</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+            <ion-segment color="primary" mode="ios" class="ion-hide-md-up" 
+                         (ionChange)="filterDecade($event)" value="all">
+              <ion-segment-button  mode="ios" *ngFor="let decade of decades" [value]="decade">
+                <ion-label>{{decade}}'s</ion-label>
+              </ion-segment-button>
+              <ion-segment-button mode="ios" value="all">
+                <ion-label>All</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <app-movie *ngFor="let film of filtered"
+                   [movie]="film"></app-movie>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+ 

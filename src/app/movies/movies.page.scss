@@ -1,0 +1,33 @@
+.heading {
+    --padding-top: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-bottom: 0;
+    max-height: 52px; 
+    overflow: hidden;
+    .banner {
+        width:100%; 
+    }
+}
+
+.sc-ion-segment-md-h.ion-color.sc-ion-segment-md-s {
+    .decade-button {
+        &.segment-button-checked {
+            background: var(--ion-color-primary);
+            color: var(--ion-color-contrast);
+        }
+    }
+}
+.decade-segment-container{
+    justify-content: flex-end;
+    .decade-button {
+        --border-style: solid;
+        --border-width: 1px;
+        --border-color: var(--ion-color-primary);
+        color: var(--ion-color-primary);
+        max-width: 50px;   
+    } 
+}
+.decade-segment-small-container{
+    justify-content: flex-end;
+}
