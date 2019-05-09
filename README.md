@@ -1,7 +1,10 @@
 # BatmanMovies
 
+![Alt text](./batmanmovies.png)
+
 ### Installation
 `npm install` install all the npm depecdencies, angular CLI should be declared globally, also this is using the Ionic CLI.
+angular CLI should be install globablly 
 
 ### Running locally
 `ng serve` or `ionic serve` will start the development application. Navigate to http://localhost:8100/.  
