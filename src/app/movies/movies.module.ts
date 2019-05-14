@@ -6,9 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MoviesPage } from './movies.page';
-import { MovieComponent } from './movie-item/movie.component';
-import { MovieCardMobileComponent } from './movie-card-mobile/movie-card-mobile.component';
-import { MovieCardComponent } from './movie-card/movie-card.component';
+import { MovieComponent } from './movie-card/movie-card.component';
+import { MovieCardMobileComponent } from './movie-card-mobile-info/movie-card-mobile-info.component';
+import { MovieCardComponent } from './movie-card-info/movie-card-info.component';
 
 const routes: Routes = [
   {

@@ -37,52 +37,58 @@ describe('MoviesPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should create a list of decades', () => {
-    component.movies = films;
-    fixture.detectChanges();
-    component.getMovieDecades();
-    const decadesTestList = ['1970', '1980', '1990', '2000', '2010'];
+  describe('getMovieDecades', () => {
+    it('should create a list of decades', () => {
+      component.movies = films;
+      fixture.detectChanges();
+      component.getMovieDecades();
+      const decadesTestList = ['1970', '1980', '1990', '2000', '2010'];
 
-    expect(component.decades).toEqual(decadesTestList);
+      expect(component.decades).toEqual(decadesTestList);
+    });
   });
-  it('should get a list of movies by decade 1980', () => {
-    component.movies = films;
-    fixture.detectChanges();
-    component.filterDecade({detail: {value: '1980'}});
+  describe('filterDecade', () => {
+    it('should get a list of movies by decade 1980', () => {
+      component.movies = films;
+      fixture.detectChanges();
+      component.filterDecade({detail: {value: '1980'}});
 
-    expect(component.filtered.length).toEqual(2);
-  });
-  it('should get a list of movies by decade 1970', () => {
-    component.movies = films;
-    fixture.detectChanges();
-    component.filterDecade({detail: {value: '1970'}});
+      expect(component.filtered.length).toEqual(2);
+    });
+    it('should get a list of movies by decade 1970', () => {
+      component.movies = films;
+      fixture.detectChanges();
+      component.filterDecade({detail: {value: '1970'}});
 
-    expect(component.filtered.length).toEqual(1);
-  });
-  it('should get a list of all movies ', () => {
-    component.movies = films;
-    fixture.detectChanges();
-    component.filterDecade({detail: {value: 'all'}});
+      expect(component.filtered.length).toEqual(1);
+    });
+    it('should get a list of all movies ', () => {
+      component.movies = films;
+      fixture.detectChanges();
+      component.filterDecade({detail: {value: 'all'}});
 
-    expect(component.filtered.length).toEqual(6);
+      expect(component.filtered.length).toEqual(6);
+    });
   });
-  it('year is not in decade ', () => {
-    component.movies = films;
-    fixture.detectChanges();
-    const isInDecade = component.isYearInDecade('1988', '1990');
-    expect(isInDecade).toEqual(false);
-  });
-  it('year is not in decade range', () => {
-    component.movies = films;
-    fixture.detectChanges();
-    const isInDecade = component.isYearInDecade('1990–2010', '1980');
-    expect(isInDecade).toEqual(false);
-  });
-  it('year is in decade range', () => {
-    component.movies = films;
-    fixture.detectChanges();
-    const isInDecade = component.isYearInDecade('1990–2010', '1990');
-    expect(isInDecade).toEqual(true);
+  describe('filterDecade', () => {
+    it('year is not in decade ', () => {
+      component.movies = films;
+      fixture.detectChanges();
+      const isInDecade = component.isYearInDecade('1988', '1990');
+      expect(isInDecade).toEqual(false);
+    });
+    it('year is not in decade range', () => {
+      component.movies = films;
+      fixture.detectChanges();
+      const isInDecade = component.isYearInDecade('1990–2010', '1980');
+      expect(isInDecade).toEqual(false);
+    });
+    it('year is in decade range', () => {
+      component.movies = films;
+      fixture.detectChanges();
+      const isInDecade = component.isYearInDecade('1990–2010', '1990');
+      expect(isInDecade).toEqual(true);
+    });
   });
 });
 

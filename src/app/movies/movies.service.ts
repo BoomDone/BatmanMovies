@@ -9,29 +9,6 @@ export class MoviesService {
 
   apiKey = '9bfc98b7';
   constructor(private http: HttpClient) { }
-  films =
-    {Search: [{
-      Poster: 'movie1.JPG',
-      Title: 'batman1',
-      Type: 'type',
-      Year: '1988',
-      imdbID: '12345'
-      },
-      {
-        Poster: 'movie1.JPG',
-      Title: 'batman2',
-      Type: 'type',
-      Year: '1998',
-      imdbID: '123456'
-      },
-      {
-        Poster: 'movie1.JPG',
-      Title: 'batman2',
-      Type: 'type',
-      Year: '2098',
-      imdbID: '1234566'
-      }
-    ]};
 
   getMovies() {
     return this.http.get(`https://www.omdbapi.com/?s=Batman&apikey=${this.apiKey}`);

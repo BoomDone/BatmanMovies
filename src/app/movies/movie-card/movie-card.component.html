@@ -1,28 +1,22 @@
-<ion-card-header class="movie-card-header"> 
-    <ion-card-title class="movie-card-title">{{movieDetails.Title}}</ion-card-title>
-</ion-card-header>
-<ion-card-content class="movie-card-content">
-    <div>
-        <ion-grid no-padding> 
-            <ion-row>
-                <ion-col class="movie-rating-col" size-med="1" size-lg="1" size-sm="2" size-xs="2">
-                    <span class="movie-rating radius-border">{{movieDetails.Rated}}</span>
-                </ion-col>
-                <ion-col >
-                    {{movieDetails.Runtime}}
-                </ion-col>
-                <ion-col size="2" class="movie-released-col">
-                    {{movieDetails.Released}}
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <div>{{movieDetails.Plot}}</div>
-            </ion-row>
-        </ion-grid>
-    </div>
-</ion-card-content>
-<ion-footer no-border>
-    <ion-toolbar class="footer">
-        <ion-button float-right color="warning" (click)="viewOnImdb()">View on IMDB</ion-button>
-    </ion-toolbar>
-</ion-footer>
+<ion-card *ngIf="movieDetails" class="movie-details">
+    <ion-grid>
+        <ion-row>
+            <ion-col class="ion-hide-sm-down" >
+                <ion-item class="movie-card" lines="none">
+                    <ion-thumbnail class="movie-card-thumbnail" slot="start">
+                        <img class="radius-border" [src]="getFilmPoster(movieDetails.Poster)">
+                    </ion-thumbnail>
+                    <app-movie-card [movieDetails]="movieDetails"></app-movie-card>
+                  </ion-item>
+            </ion-col>
+            <ion-col class="ion-hide-md-up">
+                <ion-item class="movie-card" lines="none">
+                    <ion-thumbnail slot="start" class="movie-card-small-thumbnail">
+                        <img class="radius-border" [src]="getFilmPoster(movieDetails.Poster)">
+                    </ion-thumbnail>
+                    <app-movie-card-mobile [movieDetails]="movieDetails"></app-movie-card-mobile>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-card>

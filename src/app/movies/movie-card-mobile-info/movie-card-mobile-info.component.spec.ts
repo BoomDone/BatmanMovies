@@ -1,7 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MovieCardMobileComponent } from './movie-card-mobile.component';
+import { MovieCardMobileComponent } from './movie-card-mobile-info.component';
 
 @Component({
     selector: 'test-component-wrapper',
