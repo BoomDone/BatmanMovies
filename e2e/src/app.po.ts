@@ -5,7 +5,7 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.deepCss('app-root ion-content')).getText();
+  getBannerImage() {
+    return element(by.deepCss('app-root ion-header ion-toolbar .banner')).getAttribute('src');
   }
 }

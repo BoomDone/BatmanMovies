@@ -25,3 +25,28 @@ This application is using
 - Ionic 4 css utils: https://ionicframework.com/docs/layout/css-utilities
 - Angular 7: https://angular.io/docs
 - Jest:  https://jestjs.io/
+
+### Using Angular/Ionic CLI
+`ionic g <Schematic(optional)>` will help with generating 
+- page
+- component
+- service
+- module
+- class
+- directive
+- gaurd
+
+Angular CLI `ng g <Schematic>` 
+- application
+- class
+- component
+- directive
+- e2e
+- enum
+- guard
+- interface
+- library
+- module
+- page
+- pipe
+- service

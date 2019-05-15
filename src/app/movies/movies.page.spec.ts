@@ -70,7 +70,7 @@ describe('MoviesPage', () => {
       expect(component.filtered.length).toEqual(6);
     });
   });
-  describe('filterDecade', () => {
+  describe('detectChanges', () => {
     it('year is not in decade ', () => {
       component.movies = films;
       fixture.detectChanges();
